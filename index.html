@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<style>
+    body {
+        background-color: #FFD0D0;
+        text-align: center;
+    }
+    input {
+        margin-bottom: 10px;
+        padding: 5px;
+    }
+    button {
+        padding: 8px 16px;
+        margin: 5px;
+        cursor: pointer;
+    }
+
+    .container {
+            background-color: #E1ACAC;
+            border-radius: 20px;
+            padding: 50px;
+            max-width: 700px;
+            border-block: dashed;
+            border-left: dashed;
+            border-right: dashed;
+            border-color: #CA8787;
+            border-width: 5px;
+            font-family: monospace;
+    }
+
+    kbd {
+        background-color: #A87676;
+        color: #FFD0D0;
+    }
+
+    button{
+            font-family: monospace;
+            display: inline-block;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: initial;
+            outline: none;
+            color: black;
+            background-color: #CA8787;
+            border-radius: 15px;
+            border: solid;
+            border-color: #A87676;
+            
+           
+        }
+
+
+       button:hover {
+           background-color: #A87676
+       }
+
+       button:active {
+           background-color: #A87676;
+           
+           transform: translateY(4px);
+        }
+
+        .button-img {
+            width: 30px;
+            height: 30px;
+
+        }
+
+        
+
+</style>
+</head>
+<body>
+
+<img src="https://grlmag.com/wp-content/uploads/2022/04/pink-divider-png-4-570x285.png"></img>
+
+<div class="container mt-2">
+<h2><kbd>< Calculator ></kbd></h2>
+<div>
+    <label for="x">enter a value for x:</label>
+    <input type="number" id="x">
+</div>
+<div>
+    <label for="y">enter a value for y:</label>
+    <input type="number" id="y">
+</div>
+<div>
+    <button onclick="calculate('product')"><img src="https://s3.getstickerpack.com/storage/uploads/sticker-pack/pink-lover-1/sticker_16.png?1da68f1e0444c3918250b43b44f9bbca" class="button-img"> product</button></img>
+
+    <button onclick="calculate('exponent')"><img src="https://s3.getstickerpack.com/storage/uploads/sticker-pack/pink-lover-1/sticker_16.png?1da68f1e0444c3918250b43b44f9bbca" class="button-img"> x raised to y</button></img>
+
+    <button onclick="calculate('remainder')"><img src="https://s3.getstickerpack.com/storage/uploads/sticker-pack/pink-lover-1/sticker_16.png?1da68f1e0444c3918250b43b44f9bbca" class="button-img"> remainder</button></img>
+
+    <button onclick="calculate('equality')"><img src="https://s3.getstickerpack.com/storage/uploads/sticker-pack/pink-lover-1/sticker_16.png?1da68f1e0444c3918250b43b44f9bbca" class="button-img"> is x=y ? </button></img>
+
+</div>
+
+<script>
+function calculate(operation) {
+    var x = parseFloat(document.getElementById('x').value);
+    var y = parseFloat(document.getElementById('y').value);
+    var result;
+
+    switch(operation) {
+        case 'product':
+            result = x * y;
+            break;
+        case 'exponent':
+            result = x ** y;
+            break;
+        case 'remainder':
+            result = x % y;
+            break;
+        case 'equality':
+            result = (x === y) ? "x = y" : "x ≠ y";
+            break;
+        default:
+            result = "Invalid operation";
+    }
+    window.alert("answer: " + result);
+}
+</script>
+ </div>
+<img src="https://grlmag.com/wp-content/uploads/2022/04/pink-divider-png-4-570x285.png"></img>
+</body>
+</html>
+                                                                                                                                                                                                
